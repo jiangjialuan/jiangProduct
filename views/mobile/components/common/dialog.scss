@@ -1,0 +1,70 @@
+.dialog {
+    width: 80%;
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    background: #fff;
+    border-radius: .2rem;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top .3s;
+    &.show {
+        top: 50%;
+        z-index: 101;
+        opacity: 1;
+    }
+    .pop-content {
+        .pop-title {
+            font-size: .28rem;
+            text-align: center;
+            color: #333;
+        }
+        padding: .4rem;
+        font-size: .24rem;
+        color: #999;
+        width: 80%;
+        margin: 0 auto;
+        line-height: .4rem;
+        p {
+            margin-top: .3rem;
+        }
+    }
+    .pop-btn {
+        height: .5rem;
+        line-height: .5rem;
+        margin-bottom: .2rem;
+        .btn-item {
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+            font-size: .28rem;
+            color: #333;
+            position: relative;
+            &.btn-confirm {
+                color: #f04e4c;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: .01rem;
+                height: 100%;
+                right: 0;
+                background: #ddd;
+                &:last-child {
+                    background: none;
+                }
+            }
+        }
+    }
+    &.alert {
+        .pop-content {
+            text-align: center;
+        }
+        .btn-item {
+            width: 100%;
+            border-top: 1px solid #eee;
+            padding-top: 0.08rem;
+        }
+    }
+}

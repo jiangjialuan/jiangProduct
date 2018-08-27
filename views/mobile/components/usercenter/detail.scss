@@ -1,0 +1,178 @@
+// 提现
+.user-detail {
+    background: #f2f3f4;
+    height: 7.5rem;
+    top: initial;
+    z-index: 10;
+    .title {
+        line-height: .9rem;
+        border-bottom: .02rem solid #ddd;
+        background: #fff;
+        font-size: .3rem;
+        text-align: center;
+        .close-btn {
+            width: .9rem;
+            height: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            &:after {
+                content: "";
+                background: url(../../img/icon/i-close.png);
+                width: .28rem;
+                height: .28rem;
+                background-size: contain;
+            }
+        }
+        .back-link {
+            width: .9rem;
+            height: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            &:after {
+                content: "";
+                background: url(../../img/icon/i-arrow-left.png);
+                width: .18rem;
+                height: .32rem;
+                background-size: contain;
+            }
+        }
+    }
+    .detail-tab {
+        height: .8rem;
+        line-height: .8rem;
+        border-bottom: .02rem solid #ddd;
+        background: #fff;
+        .tab-item {
+            font-size: .3rem;
+            color: #666;
+            text-align: center;
+            width: 50%;
+            display: inline-block;
+            position: relative;
+            &.item-active {
+                color: #f04e4c;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    height: .04rem;
+                    left: 0;
+                    background: #f04e4c;
+                }
+            }
+        }
+    }
+    .detail-content {
+        display: none;
+        height: 100%;
+        &.inout-content,&.redeem-content {
+            display: block;
+        }
+        .detail-item {
+            margin-top: .12rem;
+            display: block;
+            padding: .3rem;
+            font-size: .24rem;
+            color: #999;
+            position: relative;
+            background: #fff;
+            text-align: center;
+            .item-name {
+                max-width: 5rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: .48rem;
+                font-size: .3rem;
+                color: #333;
+                line-height: .48rem;
+                white-space: nowrap;
+                text-align: left;
+                span {
+                    height: .3rem;
+                    line-height: .32rem;
+                    background: #999;
+                    font-size: .2rem;
+                    display: inline-block;
+                    vertical-align: middle;
+                    min-width: .9rem;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: .15rem;
+                    &.success {
+                        background: #f04e4c;
+                    }
+                }
+            }
+            .item-date {
+                margin-right: .24rem;
+            }
+            .item-viewer {
+                /* position: absolute; */
+                right: .24rem;
+                text-align: right;
+                /* top: .24rem; */
+                .viewer-num {
+                    color: #f04e4c;
+                    font-size: .36rem;
+                }
+            }
+        }
+    }
+}
+
+.detail-confirm {
+    width: 80%;
+    // .pop-title {
+    //     margin: .4rem 0 .3rem;
+    // }
+    .pop-content {
+        .pop-title {
+            font-size: .28rem;
+            text-align: center;
+            color: #333;
+        }
+        padding: .4rem;
+        font-size: .24rem;
+        color: #999;
+        width: 80%;
+        margin: 0 auto;
+        line-height: .4rem;
+        p {
+            margin-top: .3rem;
+        }
+    }
+    .pop-btn {
+        height: .5rem;
+        line-height: .5rem;
+        margin-bottom: .2rem;
+        .btn-item {
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+            font-size: .28rem;
+            color: #333;
+            position: relative;
+            &.btn-confirm {
+                color: #f04e4c;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: .01rem;
+                height: 100%;
+                right: 0;
+                background: #ddd;
+                &:last-child {
+                    background: none;
+                }
+            }
+        }
+    }
+}

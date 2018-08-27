@@ -1,0 +1,43 @@
+.send-pubilc-message {
+    width: 100%;
+    height: .8rem;
+    form {
+        display: flex;
+        background: #fff;
+    }
+    &.show {
+        opacity: 1;
+        bottom: 0;
+        z-index: 1;
+    }
+    input {
+        border: none;
+        color: #000;
+        line-height: .32rem;
+        margin: .24rem 0;
+        text-indent: .12rem;
+        flex: 1;
+    }
+    ::-webkit-input-placeholder {
+        color: #999;
+    }
+    .send-btn {
+        text-align: center;
+        width: 1.2rem;
+        font-size: .28rem;
+        position: relative;
+        vertical-align: middle;
+        color: #f04e4c;
+        border: none;
+        background: transparent;
+        &:before {
+            content: "";
+            width: .01rem;
+            height: .6rem;
+            background: #ddd;
+            position: absolute;
+            left: 0;
+            top: .1rem;
+        }
+    }
+}

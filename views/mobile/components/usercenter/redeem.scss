@@ -1,0 +1,200 @@
+// 提现
+.user-redeem {
+    background: #fff;
+    width: 100%;
+    left: 0;
+    height: 7.5rem;
+    .title {
+        line-height: .9rem;
+        border-bottom: .02rem solid #ddd;
+        background: #fff;
+        font-size: .3rem;
+        text-align: center;
+        .close-btn {
+            width: .9rem;
+            height: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            &:after {
+                content: "";
+                background: url(../../img/icon/i-close.png);
+                width: .28rem;
+                height: .28rem;
+                background-size: contain;
+            }
+        }
+        .back-link {
+            width: .9rem;
+            height: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            &:after {
+                content: "";
+                width: .2rem;
+                height: .2rem;
+                display: inline-block;
+                border-top: .02rem solid #666;
+                border-left: .02rem solid #666;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .error-tips {
+        color: #f00;
+        text-align: center;
+        height: .4rem;
+    }
+    .redeem-account {
+        .account-title {
+            background: #fff;
+            font-size: .3rem;
+            padding: .3rem;
+            position: relative;
+        }
+        .redeem-account-toggle {
+            height: .6rem;
+            line-height: .6rem;
+            position: absolute;
+            right: .3rem;
+            top: .2rem;
+            border-radius: .12rem;
+            overflow: hidden;
+            .redeem-account-item {
+                position: relative;
+                display: inline-block;
+                width: 2.4rem;
+                color: #999;
+                text-align: center;
+                &.item-active {
+                    background: #00c800;
+                    color: #fff;
+                    border-radius: .12rem;
+                }
+            }
+        }
+        .account-input {
+            padding: 0 .3rem;
+            background: #fff;
+            padding-bottom: .12rem;
+            .input-txt {
+                height: .72rem;
+                border-radius: .12rem;
+                border: .01rem solid #ddd;
+                width: 100%;
+                text-indent: .2rem;
+            }
+        }
+    }
+    .redeem-amount {
+        background: #fff;
+        .amount-title {
+            background: #fff;
+            font-size: .3rem;
+            padding: .3rem;
+            position: relative;
+        }
+        .amount-input {
+            margin: 0 .3rem;
+            border-bottom: .01rem solid #999;
+            em {
+                font-size: .6rem;
+                color: #333;
+                font-style: normal;
+            }
+            .input-txt {
+                border: none;
+                width: 2.4rem;
+                font-size: .6rem;
+                color: #333;
+            }
+            span {
+                font-size: .3rem;
+                color: #ccc;
+            }
+        }
+        .amount-tips {
+            text-align: right;
+            padding: .12rem .3rem;
+            color: #999;
+            .redeem-all {
+                color: #f04e4c;
+                text-decoration: underline;
+            }
+        }
+    }
+    .btn-area {
+        margin: .25rem auto;
+        padding: 0 .3rem;
+        text-align: center;
+        .redeem-btn {
+            height: .9rem;
+            line-height: .9rem;
+            width: 100%;
+            font-size: .3rem;
+            color: #fff;
+            border-radius: .45rem;
+            border: none;
+            background: #f04e4c;
+        }
+        .service-tips {
+            font-size: .2rem;
+            margin-top: .2rem;
+            color: #bbb;
+        }
+    }
+    .user-praise {
+        background: #fff;
+        padding: .3rem;
+        font-size: .3rem;
+        border-bottom: .01rem solid #ddd;
+        .detail-link {
+            color: #999;
+            &:after {
+                content: "";
+                width: .2rem;
+                height: .2rem;
+                display: inline-block;
+                border-top: .02rem solid #666;
+                border-right: .02rem solid #666;
+                transform: rotate(45deg);
+            }
+        }
+        .praise-detail {
+            margin-top: .25rem;
+            height: .6rem;
+            line-height: .6rem;
+            .praise-money {
+                font-size: .6rem;
+                color: #f04e4c;
+            }
+            .resume-btn {
+                display: inline-block;
+                background: #f04e4c;
+                color: #fff;
+                padding: 0 .24rem;
+                border-radius: .3rem;
+            }
+        }
+    }
+    .user-order {
+        margin-top: .2rem;
+        background: #fff;
+        padding: .3rem;
+        font-size: .3rem;
+        &:after {
+            content: "";
+            width: .2rem;
+            height: .2rem;
+            display: inline-block;
+            border-top: .02rem solid #666;
+            border-right: .02rem solid #666;
+            transform: rotate(45deg);
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.user-center {
+    background: #f2f3f4;
+    width: 100%;
+    left: 0;
+    height: 7.5rem;
+    .title {
+        line-height: .9rem;
+        border-bottom: .02rem solid #ddd;
+        background: #fff;
+        font-size: .3rem;
+        text-indent: .3rem;
+        .close-btn {
+            width: .9rem;
+            height: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            &:after {
+                content: "";
+                background: url(../../img/icon/i-close.png);
+                width: .28rem;
+                height: .28rem;
+                background-size: contain;
+            }
+        }
+    }
+    .user-praise {
+        background: #fff;
+        padding: .3rem;
+        font-size: .3rem;
+        border-bottom: .01rem solid #ddd;
+        .detail-link {
+            color: #999;
+            &:after {
+                content: "";
+                width: .2rem;
+                height: .2rem;
+                display: inline-block;
+                border-top: .02rem solid #666;
+                border-right: .02rem solid #666;
+                transform: rotate(45deg);
+            }
+        }
+        .praise-detail {
+            margin-top: .25rem;
+            height: .6rem;
+            line-height: .6rem;
+            .praise-money {
+                font-size: .6rem;
+                color: #f04e4c;
+            }
+            .resume-btn {
+                display: inline-block;
+                background: #f04e4c;
+                color: #fff;
+                padding: 0 .24rem;
+                border-radius: .3rem;
+            }
+        }
+    }
+    .user-order {
+        margin-top: .2rem;
+        background: #fff;
+        padding: .3rem;
+        .order-title {
+            font-size: .3rem;
+            &:after {
+                content: "";
+                width: .2rem;
+                height: .2rem;
+                display: inline-block;
+                border-top: .02rem solid #666;
+                border-right: .02rem solid #666;
+                transform: rotate(45deg);
+                float: right;
+                margin-top: .1rem;
+            }
+        }
+    }
+}

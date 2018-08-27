@@ -1,0 +1,28 @@
+// .content-box {
+.room-chat-messages {
+    width: 6rem;
+    height: 3.48rem;
+    color: #333;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0 .12rem .12rem;
+    -webkit-overflow-scrolling: touch;
+    .room-chat-item {
+        margin-bottom: .12rem;
+        .info {
+            font-size: .24rem;
+            background: rgba(255, 255, 255, 0.45);
+            border-radius: .12rem;
+            line-height: .32rem;
+            display: inline-block;
+            padding: .08rem .18rem;
+            word-break: break-all;
+            &.system-tips {
+                color: #0f0;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

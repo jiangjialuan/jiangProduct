@@ -1,0 +1,78 @@
+// 发红包
+.packet {
+    .content {
+        background: #fff;
+        width: 100%;
+        left: 0;
+        padding: .2rem .3rem;
+    }
+    .error-tips {
+        color: #f00;
+        text-align: center;
+        height: .4rem;
+        line-height: .4rem;
+    }
+    .packet-title {
+        text-align: center;
+        font-size: .3rem;
+        margin-bottom: .2rem;
+    }
+    .packet-input {
+        border: .02rem solid #999;
+        background: #fff;
+        line-height: .36rem;
+        border-radius: .12rem;
+        padding: .2rem;
+        margin-bottom: .12rem;
+        span {
+            width: 1.6rem;
+            display: inline-block;
+        }
+        input {
+            border: none;
+            width: 4.5rem;
+        }
+    }
+    .total-money {
+        text-align: center;
+        margin: 0 auto .45rem;
+        .money {
+            color: #f04e4c;
+            font-size: .8rem;
+        }
+    }
+    .packet-tips {
+        font-size: .24rem;
+        color: #666;
+        text-align: center;
+        &:before {
+            content: "";
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: .28rem;
+            height: .28rem;
+            background-size: contain;
+            vertical-align: middle;
+            margin-right: .08rem;
+        }
+        &.checked:before {
+            background-image: url(../../img/icon/checked.png);
+        }
+        &.uncheck:before {
+            background-image: url(../../img/icon/uncheck.png);
+        }
+        &.disable:before {
+            background-image: url(../../img/icon/check_disable.png);
+        }
+    }
+    .packet-btn {
+        font-size: .3rem;
+        height: .9rem;
+        width: 100%;
+        border: none;
+        background: #f04e4c;
+        border-radius: .45rem;
+        color: #fff;
+        outline: none;
+    }
+}

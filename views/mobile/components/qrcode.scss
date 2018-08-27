@@ -1,0 +1,12 @@
+.qrcode {
+    .content {
+        left: 50%;
+        bottom: 50%;
+        -webkit-transform: translate(- 50%, -50%);
+        width: 5rem;
+        box-shadow: none;
+    }
+    .code {
+        max-width: 100%;
+    }
+}

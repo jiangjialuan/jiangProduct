@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" name="viewport" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 设置锁定横屏、竖屏显示模式，portrait（横屏），landscape（竖屏）-->
+    <meta name="x5-orientation" content="landscape">
+    <!-- 设置全屏显示页面 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 开启页面以应用模式显示（全屏显示等） -->
+    <meta name="x5-page-mode" content="app">
+    <script>
+    function stopBounce() {
+        let iLastTouch = null;
+        document.body.addEventListener('touchend', function(event) {
+            let iNow = new Date().getTime();
+            iLastTouch = iLastTouch || iNow + 1;
+            let delta = iNow - iLastTouch;
+            if (delta < 500 && delta > 0) {
+                event.preventDefault();
+                return false;
+            }
+            iLastTouch = iNow;
+        }, false);
+    }
+    </script>
+</head>
+
+<body>
+    <div class='application' id="app"></div>
+    <script src="http://liveimg.artqiyi.com/common/js/react.min.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/react-dom.min.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/ReactRouter.min.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/zepto.min.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/socket.io-1.2.0.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/rpc.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/overscroll.min.js"></script>
+    <script src="http://liveimg.artqiyi.com/common/js/fastclick.js"></script>
+    <script src="http://yimi.artqiyi.com/views/mobile/sdk/artqiyi-sdk.js"></script>
+    <!-- 必须加载微信api资源 -->
+    <script src="http://liveimg.artqiyi.com/common/js/jweixin-1.0.0.js"></script>
+    <script>
+    stopBounce();
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+    </script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9011ee50a51501288b87f7656de98048";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</body>
+
+</html>

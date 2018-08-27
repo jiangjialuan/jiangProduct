@@ -1,0 +1,187 @@
+// 抢红包
+.rob-packet {
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    .rob-packet-content {
+        width: 3.6rem;
+        height: 4rem;
+        margin: 0 auto;
+        position: relative;
+        color: #fff;
+        .close-btn {
+            position: absolute;
+            right: -.2rem;
+            top: -.2rem;
+            border-radius: 50%;
+            width: .6rem;
+            height: .6rem;
+            background-color: rgba(0, 0, 0, .25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:before {
+                content: "";
+                width: .28rem;
+                height: .28rem;
+                background-position: 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url(../../img/icon/i-close.png);
+            }
+        }
+    }
+    &.packet-receive {
+        width: 3.6rem;
+        height: 4rem;
+        background-image: url(../../img/packet/receive.png);
+        .packet-title {
+            text-align: center;
+            line-height: .54rem;
+            padding-top: .36rem;
+            font-size: .24rem;
+            h3 {
+                font-size: .36rem;
+                font-weight: 600;
+            }
+        }
+        .total-money {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            bottom: .24rem;
+            color: #fff600;
+            font-size: .3rem;
+        }
+    }
+    &.packet-receive-star {
+        width: 4.2rem;
+        height: 4.24rem;
+        background-image: url(../../img/packet/receive-star.png);
+        .rob-packet-content {
+            margin-top: .2rem;
+        }
+        .packet-title {
+            position: absolute;
+            bottom: .56rem;
+            text-align: center;
+            width: 100%;
+            font-size: .24rem;
+            line-height: .54rem;
+            h3 {
+                font-size: .3rem;
+                font-weight: 600;
+            }
+        }
+    }
+    &.packet-robed {
+        width: 4.02rem;
+        height: 4.78rem;
+        background-image: url(../../img/packet/robed.png);
+        .rob-packet-content {
+            margin-top: .8rem;
+        }
+        .packet-title {
+            position: absolute;
+            bottom: .28rem;
+            text-align: center;
+            width: 100%;
+            font-size: .24rem;
+            line-height: .54rem;
+            h3 {
+                font-size: .3rem;
+                font-weight: 600;
+            }
+            button {
+                display: inline-block;
+                width: 100;
+                height: .6rem;
+                background: transparent;
+                width: 2.8rem;
+                border: .02rem solid #fff;
+                border-radius: .3rem;
+                color: #fff;
+                font-size: .3rem;
+                margin-top: .2rem;
+            }
+        }
+        .total-money {
+            width: 3rem;
+            height: 1.4rem;
+            margin: 0 auto;
+            padding-top: .2rem;
+            text-align: center;
+            .money {
+                font-size: .6rem;
+                border-bottom: .01rem solid #fff;
+                margin: 0 .32rem;
+            }
+            .tips {
+                font-size: .24rem;
+                color: #9e3800;
+                margin-top: .08rem;
+            }
+        }
+    }
+    &.packet-robed-out {
+        width: 4.02rem;
+        height: 4.78rem;
+        background-image: url(../../img/packet/robed-out.png);
+        .rob-packet-content {
+            margin-top: .8rem;
+        }
+        .packet-title {
+            position: absolute;
+            bottom: .28rem;
+            text-align: center;
+            width: 100%;
+            font-size: .24rem;
+            line-height: .54rem;
+            h3 {
+                font-size: .3rem;
+                font-weight: 600;
+            }
+            button {
+                display: inline-block;
+                width: 100;
+                height: .6rem;
+                background: transparent;
+                width: 2.8rem;
+                border: .02rem solid #fff;
+                border-radius: .3rem;
+                color: #fff;
+                font-size: .3rem;
+                margin-top: .2rem;
+            }
+        }
+    }
+}
+
+.rob-packet-tips {
+    position: relative;
+    background: rgba(250, 194, 51, .75);
+    font-size: .24rem;
+    border-radius: .12rem;
+    line-height: .32rem;
+    display: inline-block;
+    padding: .08rem .18rem;
+    word-break: break-all;
+    color: #fff;
+    padding-right: .6rem;
+    margin: 0 .12rem .12rem;
+    &:after {
+        background: url(../../img/packet/i-packet.png) no-repeat;
+        content: "";
+        width: .49rem;
+        height: .62rem;
+        background-size: contain;
+        position: absolute;
+        bottom: .06rem;
+        right: .06rem;
+    }
+}

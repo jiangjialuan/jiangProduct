@@ -1,0 +1,23 @@
+.service-page {
+    padding: .1rem;
+    // .page-title {
+    //     font-size: .32rem;
+    //     font-weight: 600;
+    //     color: #333;
+    //     margin: .2rem 0;
+    // }
+    .sub-title {
+        font-size: .28rem;
+        font-weight: 600;
+        color: #333;
+        margin: .2rem 0;
+    }
+    p{
+        line-height: .42rem;
+        margin-bottom: .12rem;
+        &.tips{
+            font-weight: 600;
+            color: #333;
+        }
+    }
+}

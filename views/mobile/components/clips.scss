@@ -1,0 +1,232 @@
+.video-box {
+    background-image: url(../img/bg.jpg);
+    justify-content: space-between;
+    .code {
+        width: 3rem;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: -moz-fit-content;
+        left: 50%;
+        top: 0;
+        -webkit-transform: translate(-50%, .96rem);
+    }
+    header {
+        height: .96rem;
+        background: rgba(0, 0, 0, .8);
+        .star-profile {
+            height: .6rem;
+            margin: .18rem .28rem;
+            position: relative;
+            color: #fff;
+            img {
+                max-width: 100%;
+                border-radius: 50%;
+                max-height: 100%;
+            }
+            .star-name {
+                margin-left: .12rem;
+                vertical-align: middle;
+                p {
+                    color: #999;
+                    font-size: .2rem;
+                }
+            }
+            .focus-btn {
+                width: 1.2rem;
+                height: .6rem;
+                line-height: .6rem;
+                border: .02rem solid #ec197e;
+                border-radius: .04rem;
+                color: #ec197e;
+                margin-left: .12rem;
+            }
+        }
+    }
+    .next-icon {
+        position: absolute;
+        background: #000;
+        width: .4rem;
+        height: .4rem;
+        bottom: 1.6rem;
+    }
+    .icon {
+        position: relative;
+        color: #fff;
+        font-size: .24rem;
+        .praise-area {
+            bottom: 1rem;
+        }
+        &:before {
+            content: '';
+            background-repeat: no-repeat;
+            background-position: 50%;
+            display: block;
+            background-size: .48rem;
+            margin-bottom: .04rem;
+            height: .48rem;
+        }
+        &.praise-icon {
+            &:before {
+                background-image: url(../img/clip/praise.png);
+            }
+            &.praised {
+                &:before {
+                    background-image: url(../img/clip/praised.png);
+                }
+            }
+        }
+        &.more-icon {
+            &:before {
+                background-image: url(../img/clip/more.png);
+            }
+        }
+        &.packet-icon {
+            &:before {
+                background-image: url(../img/clip/packet.png);
+            }
+        }
+        &.shop-icon {
+            &:before {
+                background-image: url(../img/clip/shop.png);
+            }
+        }
+    }
+    footer {
+        height: 1.36rem;
+        background: rgba(0, 0, 0, .8);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .video-content {
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, .6);
+        .content {
+            position: relative;
+            .video-player{
+                position: relative;
+            }
+            .video-title {
+                color: #fff;
+                padding: .12rem;
+                font-size: .24rem;
+            }
+        }
+        .poster {
+            max-width: 100%;
+            display: block;
+            position: absolute;
+        }
+        video {
+            display: none;
+        }
+        canvas {
+            max-width: 100%;
+            display: block;
+            background: rgba(0,0,0,.25);
+        }
+    }
+}
+
+// 播放器
+.video-controls {
+    display: flex;
+    /* height: .64rem; */
+    position: absolute;
+    bottom: 0;
+    /* left: .12rem; */
+    z-index: 1;
+    right: .12rem;
+    left: 0;
+    /* bottom: 0; */
+    padding: .12rem;
+    background: rgba(0, 0, 0, .45);
+    right: 0;
+    .video-icon {
+        border: none;
+        margin: 0;
+        color: #fff;
+        outline: none;
+        padding: 0;
+        background-color: transparent;
+        width: .64rem;
+        height: .64rem;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: .64rem;
+            background-size: contain;
+            height: .64rem;
+            background-repeat: no-repeat;
+            background-image: url(../img/player/pause.png);
+        }
+        &.video-play {
+            &:before {
+                background-image: url(../img/player/play.png);
+            }
+        }
+    }
+    .video-seek {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        height: .64rem;
+        position: relative;
+        margin-left: .12rem;
+        .video-seek__container {
+            position: relative;
+            top: 50%;
+            background: #fff;
+            width: 100%;
+            height: .02rem;
+            cursor: pointer;
+        }
+        .video-buffer-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 1;
+            background-color: #999;
+        }
+        .video-progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 2;
+            background-color: #f04e4c;
+            &:before {
+                content: "";
+                position: absolute;
+                width: .24rem;
+                height: .24rem;
+                top: -.1rem;
+                right: -.1rem;
+                background: url(../img/player/i-current.png) no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    .video-time {
+        font-size: .22rem;
+        /* line-height: .24rem; */
+        position: absolute;
+        color: #fff;
+        right: 0;
+        bottom: 0;
+        &.current {
+            margin-right: .04rem;
+        }
+        &.duration {
+            margin-left: .04rem;
+        }
+    }
+}

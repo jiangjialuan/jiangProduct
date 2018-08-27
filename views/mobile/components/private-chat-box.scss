@@ -1,0 +1,164 @@
+.private-chat {
+    .content{
+        background: #f2f3f4;
+        width: 100%;
+        left: 0;
+    }
+    .send-message {
+        background: #fff;
+        input {
+            border: none;
+            width: 80%;
+            float: left;
+            color: #000;
+            line-height: .32rem;
+            margin: .16rem 0;
+            text-indent: .12rem;
+        }
+        ::-webkit-input-placeholder {
+            color: #999;
+        }
+        .send-btn {
+            display: inline-block;
+            text-align: center;
+            width: 20%;
+            font-size: .28rem;
+            position: relative;
+            vertical-align: middle;
+            height: .4rem;
+            line-height: .4rem;
+            margin: .12rem 0;
+            color: #f04e4c;
+            background: transparent;
+            border: none;
+            &:before {
+                content: "";
+                width: .01rem;
+                height: 100%;
+                background: #ddd;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    .private-chat-messages {
+        overflow: hidden;
+        overflow-y: auto;
+        height: 3.36rem;
+        -webkit-overflow-scrolling: touch;
+    }
+    .chat-title {
+        font-size: .3rem;
+        height: .9rem;
+        line-height: .9rem;
+        text-align: center;
+        background: #fff;
+        margin-bottom: .04rem;
+        span {
+            color: #0da779;
+            margin: 0 .12rem;
+        }
+        .back-link {
+            width: .9rem;
+            height: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            &:after {
+                content: "";
+                background: url(../img/icon/i-arrow-left.png);
+                width: .18rem;
+                height: .32rem;
+                background-size: contain;
+            }
+        }
+    }
+    .private-chat-item {
+        padding: .12rem .28rem;
+        .chat-item {
+            color: #999;
+            font-size: .24rem;
+            .item-name {
+                font-size: .3rem;
+                color: #333;
+            }
+            .item-unread {
+                float: right;
+                color: #fff;
+                background: #f04e4c;
+                height: .36rem;
+                line-height: .36rem;
+                border-radius: .18rem;
+                text-align: center;
+                font-size: .2rem;
+                padding: 0 .12rem;
+                margin-top: .02rem;
+            }
+        }
+        .chat-time {
+            height: .48rem;
+            line-height: .48rem;
+            margin-bottom: .12rem;
+            text-align: center;
+            span {
+                background: #bbb;
+                color: #fff;
+                font-size: .24rem;
+                padding: .1rem;
+                border-radius: .1rem;
+            }
+        }
+        .chat-content {
+            .chat-name {
+                color: #666;
+                vertical-align: middle;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                white-space: nowrap;
+                margin-bottom: .12rem;
+            }
+            .chat-message {
+                font-size: .3rem;
+                color: #333;
+                background: #fff;
+                padding: .16rem .2rem;
+                max-width: 4rem;
+                vertical-align: middle;
+                display: inline-block;
+                border-radius: .12rem;
+                position: relative;
+                word-break: break-all;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    line-height: 0;
+                    font-size: 0;
+                    border-style: dashed solid dashed dashed;
+                    border-color: transparent #fff transparent transparent;
+                    border-width: .2rem .16rem;
+                    left: -.28rem;
+                    top: .16rem;
+                }
+            }
+            &.item-self {
+                .chat-name {
+                    text-align: right;
+                }
+                .chat-message {
+                    background: #fab0ae;
+                    float: right;
+                    &:before {
+                        border-style: dashed dashed dashed solid;
+                        border-color: transparent transparent transparent #fab0ae;
+                        right: -.3rem;
+                        left: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
